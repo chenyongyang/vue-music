@@ -29,7 +29,9 @@ module.exports = {
       '@': resolve('src'),
       'common': resolve('src/common'),
       'components': resolve('src/components'),
-      'pages': resolve('src/pages')
+      'pages': resolve('src/pages'),
+      'api': resolve('src/api'),
+      'base': resolve('src/base')
     }
   },
   module: {

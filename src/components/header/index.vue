@@ -8,10 +8,11 @@
   export default {
    }
 </script>
- <style scoped lang="stylus">
+<style scoped lang="stylus">
   @import '~common/stylus/variable'
   @import '~common/stylus/mixin'
-   .header
+
+  .m-header
     position: relative
     height: 44px
     text-align: center
