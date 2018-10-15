@@ -1,16 +1,20 @@
 <template>
-  <div class="header">
+  <div class="m-header">
     <div class="icon"></div>
-    <h1 class="text">Water Music</h1>
-   </div>
+    <h1 class="text">Chicken Music</h1>
+    <router-link tag="div" class="mine" to="/user">
+      <i class="icon-mine"></i>
+    </router-link>
+  </div>
 </template>
- <script>
-  export default {
-   }
+
+<script type="text/ecmascript-6">
+  export default {}
 </script>
-<style scoped lang="stylus">
-  @import '~common/stylus/variable'
-  @import '~common/stylus/mixin'
+
+<style scoped lang="stylus" rel="stylesheet/stylus">
+  @import "~common/stylus/variable"
+  @import "~common/stylus/mixin"
 
   .m-header
     position: relative

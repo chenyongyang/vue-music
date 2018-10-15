@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <header></header>
+    <m-header></m-header>
     <tab></tab>
     <keep-alive>
       <router-view></router-view>
@@ -8,18 +8,17 @@
   </div>
 </template>
 
-<script>
-import Header from 'components/header'
-  import Tab from 'components/tab'
+<script type="text/ecmascript-6">
+  import MHeader from 'components/m-header/m-header'
+  import Tab from 'components/tab/tab'
+
   export default {
-    name: 'app',
     components: {
-      Header,
+      MHeader,
       Tab
     }
   }
 </script>
 
-<style>
-
+<style scoped lang="stylus" rel="stylesheet/stylus">
 </style>

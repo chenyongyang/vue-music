@@ -1,27 +1,27 @@
-import { mapGetters, mapMutations, mapActions } from 'vuex'
-import { playMode } from 'common/js/config'
-import { shuffle } from 'common/js/util'
-export const playListMixin = {
+import {mapGetters, mapMutations, mapActions} from 'vuex'
+import {playMode} from 'common/js/config'
+import {shuffle} from 'common/js/util'
+
+export const playlistMixin = {
   computed: {
     ...mapGetters([
-      'playList'
+      'playlist'
     ])
   },
   mounted() {
-    this.handlePlayList(this.playList)
+    this.handlePlaylist(this.playlist)
   },
   activated() {
-    this.handlePlayList(this.playList)
+    this.handlePlaylist(this.playlist)
   },
   watch: {
     playlist(newVal) {
-      this.handlePlayList(newVal)
+      this.handlePlaylist(newVal)
     }
   },
   methods: {
-    // 外部定义
-    handlePlayList() {
-      throw new Error('component must implement handlePlayList method')
+    handlePlaylist() {
+      throw new Error('component must implement handlePlaylist method')
     }
   }
 }
@@ -33,7 +33,7 @@ export const playerMixin = {
     },
     ...mapGetters([
       'sequenceList',
-      'playList',
+      'playlist',
       'currentSong',
       'mode',
       'favoriteList'
@@ -90,7 +90,6 @@ export const playerMixin = {
   }
 }
 
-// 搜索公共代码
 export const searchMixin = {
   data() {
     return {
